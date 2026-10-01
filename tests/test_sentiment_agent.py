@@ -1,1 +1,47 @@
-aW1wb3J0IHB5dGVzdAoKZnJvbSBzZW50aW1lbnRfYWdlbnQgaW1wb3J0IFNlbnRpbWVudEFnZW50LCBtYWluCgoKQHB5dGVzdC5maXh0dXJlCmRlZiBhZ2VudCgpIC0+IFNlbnRpbWVudEFnZW50OgogICAgcmV0dXJuIFNlbnRpbWVudEFnZW50KCkKCgpkZWYgdGVzdF9jbGFzc2lmaWVzX3Bvc2l0aXZlX3RleHQoYWdlbnQ6IFNlbnRpbWVudEFnZW50KSAtPiBOb25lOgogICAgcmVzdWx0ID0gYWdlbnQuYW5hbHl6ZSgiSSBhYnNvbHV0ZWx5IGxvdmUgdGhpcyB3b25kZXJmdWwgcHJvZHVjdCEiKQoKICAgIGFzc2VydCByZXN1bHQubGFiZWwgPT0gIlBvc2l0aXZlIgogICAgYXNzZXJ0IHJlc3VsdC5jb21wb3VuZCA+IDAuMDUKICAgIGFzc2VydCByZXN1bHQucG9zaXRpdmUgPiByZXN1bHQubmVnYXRpdmUKCgpkZWYgdGVzdF9jbGFzc2lmaWVzX25lZ2F0aXZlX3RleHQoYWdlbnQ6IFNlbnRpbWVudEFnZW50KSAtPiBOb25lOgogICAgcmVzdWx0ID0gYWdlbnQuYW5hbHl6ZSgiVGhpcyBpcyBhIHRlcnJpYmxlIGFuZCBkaXNhcHBvaW50aW5nIGV4cGVyaWVuY2UuIikKCiAgICBhc3NlcnQgcmVzdWx0LmxhYmVsID09ICJOZWdhdGl2ZSIKICAgIGFzc2VydCByZXN1bHQuY29tcG91bmQgPCAtMC4wNQogICAgYXNzZXJ0IHJlc3VsdC5uZWdhdGl2ZSA+IHJlc3VsdC5wb3NpdGl2ZQoKCpkZWYgdGVzdF9jbGFzc2lmaWVzX25ldXRyYWxfdGV4dChhZ2VudDogU2VudGltZW50QWdlbnQpIC0+IE5vbmU6CiAgICByZXN1bHQgPSBhZ2VudC5hbmFseXplKCJUaGUgcGFja2FnZSBhcnJpdmVkIG9uIFR1ZXNkYXkuIikKCiAgICBhc3NlcnQgcmVzdWx0LmxhYmVsID09ICJOZXV0cmFsIgogICAgYXNzZXJ0IC0wLjA1IDwgcmVzdWx0LmNvbXBvdW5kIDwgMC4wNQoKCkBweXRlc3QubWFyay5wYXJhbWV0cml6ZSgidGV4dCIsIFsiIiwgIiAgICIsICJcblx0Il0pCmRlZiB0ZXN0X3JlamVjdHNfZW1wdHlfdGV4dChhZ2VudDogU2VudGltZW50QWdlbnQsIHRleHQ6IHN0cikgLT4gTm9uZToKICAgIHdpdGggcHl0ZXN0LnJhaXNlcyhWYWx1ZUVycm9yLCBtYXRjaD0ibXVzdCBub3QgYmUgZW1wdHkiKToKICAgICAgICBhZ2VudC5hbmFseXplKHRleHQpCgoKZGVmIHRlc3RfY2xpX3ByaW50c19sYWJlbF9hbmRfc2NvcmVzKGNhcHN5czogcHl0ZXN0LkNhcHR1cmVGaXh0dXJlW3N0cl0pIC0+IE5vbmU6CiAgICBleGl0X2NvZGUgPSBtYWluKFsiSSBhbSBoYXBweSB3aXRoIHRoZSBleGNlbGxlbnQgcmVzdWx0cyEiXSkKCiAgICBvdXRwdXQgPSBjYXBzeXMucmVhZG91dGVycigpLm91dAogICAgYXNzZXJ0IGV4aXRfY29kZSA9PSAwCiAgICBhc3NlcnQgIlNlbnRpbWVudDogUG9zaXRpdmUiIGluIG91dHB1dAogICAgYXNzZXJ0ICJDb21wb3VuZCBzY29yZToiIGluIG91dHB1dAogICAgYXNzZXJ0ICJwb3NpdGl2ZT0iIGluIG91dHB1dAo=
+import pytest
+
+from sentiment_agent import SentimentAgent, main
+
+
+@pytest.fixture
+def agent() -> SentimentAgent:
+    return SentimentAgent()
+
+
+def test_classifies_positive_text(agent: SentimentAgent) -> None:
+    result = agent.analyze("I absolutely love this wonderful product!")
+
+    assert result.label == "Positive"
+    assert result.compound > 0.05
+    assert result.positive > result.negative
+
+
+def test_classifies_negative_text(agent: SentimentAgent) -> None:
+    result = agent.analyze("This is a terrible and disappointing experience.")
+
+    assert result.label == "Negative"
+    assert result.compound < -0.05
+    assert result.negative > result.positive
+
+
+def test_classifies_neutral_text(agent: SentimentAgent) -> None:
+    result = agent.analyze("The package arrived on Tuesday.")
+
+    assert result.label == "Neutral"
+    assert -0.05 < result.compound < 0.05
+
+
+@pytest.mark.parametrize("text", ["", "   ", "\n\t"])
+def test_rejects_empty_text(agent: SentimentAgent, text: str) -> None:
+    with pytest.raises(ValueError, match="must not be empty"):
+        agent.analyze(text)
+
+
+def test_cli_prints_label_and_scores(capsys: pytest.CaptureFixture[str]) -> None:
+    exit_code = main(["I am happy with the excellent results!"])
+
+    output = capsys.readouterr().out
+    assert exit_code == 0
+    assert "Sentiment: Positive" in output
+    assert "Compound score:" in output
+    assert "positive=" in output

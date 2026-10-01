@@ -62,7 +62,7 @@ def main(argv: list[str] | None = None) -> int:
 
     result = SentimentAgent().analyze(text)
     print(f"Sentiment: {result.label}")
-    print(f"Compound score: {result.compound:+j_sf.3f}")
+    print(f"Compound score: {result.compound:+.3f}")
     print(
         "Scores: "
         f"positive={result.positive:.3f}, "

@@ -1,1 +1,49 @@
-IyBTZW50aW1lbnQgQW5hbHlzaXMgQWdlbnQKCkEgY29tcGFjdCBjb21tYW5kLWxpbmUgc2VudGltZW50IGFuYWx5c2lzIGFnZW50IGZvciBleHBsb3JpbmcgKipBSSBBZ2VudHMgYW5kIE5MUCBGb3VuZGF0aW9ucyoqLiBJdCB1c2VzIHRoZSBsaWdodHdlaWdodCBWQURFUiBsZXhpY29uLWFuZC1ydWxlLWJhc2VkIE5MUCBsaWJyYXJ5IHRvIGNsYXNzaWZ5IGEgdGV4dCBhcyAqKlBvc2l0aXZlKiosICoqTmVnYXRpdmUqKiwIG9yICoqTmV1dHJhbCoqLCBhbmQgcmVwb3J0cyBpdHMgY29tcG91bmQgc2VudGltZW50IHNjb3JlIGFuZCBwb3NpdGl2ZS9uZXV0cmFsL25lZ2F0aXZlIHByb3BvcnRpb25zLgoKIyMgUmVxdWlyZW1lbnRzCgotIFB5dGhvbiAzLjEwIG9yIG5ld2VyCi0gcGlwCgojIyBTZXR1cAoKYGBgYmFzaApweXRob24gLW0gdmVudiAudmVudgpzb3VyY2UgLnZlbnYvYmluL2FjdGl2YXRlICAgICAgICMgV2luZG93czogLnZlbnZcU2NyaXB0c1xhY3RpdmF0ZQpweXRob24gLW0gcGlwIGluc3RhbGwgLXIgcmVxdWlyZW1lbnRzLnR4dApgYGBKCiMjIFJ1bgoKUGFzcyBhIHNlbnRlbmNlIGluIHF1b3RlczoKCmBgYGJhc2gKcHl0aG9uIHNlbnRpbWVudF9hZ2VudC5weSAiSSBsb3ZlIGhvdyBoZWxwZnVsIHRoaXMgdG9vbCBpcyEiCmBgYApKT3IgcGlwZSB0ZXh0IHRocm91Z2ggc3RhbmRhcmQgaW5wdXQ6CgpgYGBiYXNoCmVjaG8gIlRoZSBkZWxpdmVyeSB3YXMgbGF0ZSBhbmQgZGlzYXBwb2ludGluZy4iIHwgcHl0aG9uIHNlbnRpbWVudF9hZ2VudC5weQpgYGBKClRoZSBhZ2VudCBwcmludHMgdGhlIHNlbnRpbWVudCBsYWJlbCwgVkFERVIgY29tcG91bmQgc2Vycm9yIChmcm9tIC0xIHRvICsxKSwgYW5kIHRoZSBub3JtYWxpemVkIHBvc2l0aXZlLCBuZXV0cmFsLCBhbmQgbmVnYXRpdmUgcHJvcG9ydGlvbnMuIFZBREVSJ3MgY29udmVudGlvbmFsIGNvbXBvdW5kIHRocmVzaG9sZHMgYXJlIHVzZWQ6IHNjb3JlcyBhdCBsZWFzdCBgMC4wNWAgYXJlIFBvc2l0aXZlLCBzY29yZXMgYXQgbW9zdCBgLTAuMDVwIGFyZSBOZWdhdGl2ZSwgYW5kIHNjb3JlcyBiZXR3ZWVuIHRoZW0gYXJlIE5ldXRyYWwuCgojIyBTYW1wbGUga25vd2xlZGdlIGJhc2UKCltgc2FtcGxlX2RhdGEuY3N2YChzYW1wbGVfZGF0YS5jc3YpIGNvbnRhaW5zIGV4YW1wbGUgc2VudGVuY2VzIGFuZCB0aGVpciBleHBlY3RlZCBzZW50aW1lbnQgbGFiZWxzLiBJdCBpcyBhIHNtYWxsIHJlZmVyZW5jZSBzZXQgZm9yIHRyeWluZyB0aGUgQ0xJOyBpdCBpcyBub3QgdXNlZCB0byB0cmFpbiBWQURFUi4KCiMjIFRlc3RzCgpJbnN0YWxsIHB5dGVzdCBpZiBpdCBpcyBub3QgYWxyZWFkeSBhdmFpbGFibGUsIHRoZW4gcnVuOgoKYGBgYmFzaApweXRob24gLW0gcGlwIGluc3RhbGwgcHl0ZXN0CnB5dGhvbiAtbSBweXRlc3QgdGVzdHMvdGVzdF9zZW50aW1lbnRfYWdlbnQucHkgLXggLXEKYGBgCgojIyBIb3cgaXQgd29ya3MKClRoZSBhZ2VudCB2YWxpZGF0ZXMgdGhhdCBpbnB1dCBpcyBub24tZW1wdHksIG9idGFpbnMgVkFERVIgcG9sYXJpdHkgc2NvcmVzLCBhbmQgYXBwbGllcyBhIHRyYW5zcGFyZW50IHRocmVzaG9sZC1iYXNlZCBkZWNpc2lvbiB0byB0aGUgY29tcG91bmQgc2NvcmUuIFZBREVSIGlzIHVzZWZ1bCBmb3IgYSBzbWFsbCBwb3J0Zm9saW8gZGVtbyBiZWNhdXNlIGl0IGlzIGZhc3QsIGhhcyBubyBtb2RlbCBkb3dubG9hZCBzdGVwLCBhbmQgaGFuZGxlcyBjb21tb24gc2VudGltZW50IGN1ZXMgc3VjaCBhcyBpbnRlbnNpZmllcnMsIHB1bmN0dWF0aW9uLCBhbmQgZW1vdGljb25zLiBJdCBpcyBhIHJ1bGUtYmFzZWQgYmFzZWxpbmUsIHNvIGNvbnRleHQtZGVwZW5kZW50IG1lYW5pbmcgYW5kIGRvbWFpbi1zcGVjaWZpYyBsYW5ndWFnZSBjYW4gc3RpbGwgbGVhZCB0byBlcnJvcnMuCg==
+# Sentiment Analysis Agent
+
+A compact command-line sentiment analysis agent for exploring **AI Agents and NLP Foundations**. It uses the lightweight VADER lexicon-and-rule-based NLP library to classify a text as **Positive**, **Negative**, or **Neutral**, and reports its compound sentiment score and positive/neutral/negative proportions.
+
+## Requirements
+
+- Python 3.10 or newer
+- pip
+
+## Setup
+
+```bash
+python -m venv .venv
+source .venv/bin/activate       # Windows: .venv\Scripts\activate
+python -m pip install -r requirements.txt
+```
+
+## Run
+
+Pass a sentence in quotes:
+
+```bash
+python sentiment_agent.py "I love how helpful this tool is!"
+```
+
+Or pipe text through standard input:
+
+```bash
+echo "The delivery was late and disappointing." | python sentiment_agent.py
+```
+
+The agent prints the sentiment label, VADER compound score (from -1 to +1), and the normalized positive, neutral, and negative proportions. VADER's conventional compound thresholds are used: scores at least `0.05` are Positive, scores at most `-0.05` are Negative, and scores between them are Neutral.
+
+## Sample knowledge base
+
+[`sample_data.csv`](sample_data.csv) contains example sentences and their expected sentiment labels. It is a small reference set for trying the CLI; it is not used to train VADER.
+
+## Tests
+
+Install pytest if it is not already available, then run:
+
+```bash
+python -m pip install pytest
+python -m pytest tests/test_sentiment_agent.py -x -q
+```
+
+## How it works
+
+The agent validates that input is non-empty, obtains VADER polarity scores, and applies a transparent threshold-based decision to the compound score. VADER is useful for a small portfolio demo because it is fast, has no model download step, and handles common sentiment cues such as intensifiers, punctuation, and emoticons. It is a rule-based baseline, so context-dependent meaning and domain-specific language can still lead to errors.
