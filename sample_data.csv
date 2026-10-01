@@ -1,0 +1,7 @@
+text,expected_sentiment
+"I love how easy and helpful this app is!",Positive
+"The service was awful and I am very disappointed.",Negative
+"The meeting starts at 10 AM in room 4.",Neutral
+"That was the best surprise ever!",Positive
+"The food was cold, bland, and unpleasant.",Negative
+"My order contains two notebooks and one pen.",Neutral
